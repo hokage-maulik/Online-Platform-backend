@@ -13,6 +13,10 @@ app.use(bodyparser.json())
 app.use("/user",router)
 app.use("/course",courserouter)
 app.use("/lesson",lessonrouter)
+app.get("/",(req,res)=>{
+    res.send("welcome to my project ")
+})
+
 app.listen(8003,()=>{
     console.log("server is running on port 8003")
 })
